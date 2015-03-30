@@ -1,0 +1,11 @@
+libapache2-mod-auth-openidc (1.8.0-1ubuntu1~precise+1) precise; urgency=low
+
+  * backport to precise
+
+ -- root <root@2eee195fdb04>  Sat, 28 Mar 2015 10:26:01 +0000
+
+libapache2-mod-auth-openidc (1.8.0-1) unstable; urgency=medium
+
+  * new upstream release
+
+ -- Hans Zandbelt <hzandbelt@pingidentity.com>  Thu, 26 Feb 2015 16:21:02 +0100

@@ -1,0 +1,20 @@
+Index: mod_auth_openidc-1.8.0/src/metadata.c
+===================================================================
+--- mod_auth_openidc-1.8.0.orig/src/metadata.c
++++ mod_auth_openidc-1.8.0/src/metadata.c
+@@ -656,10 +656,13 @@ static apr_byte_t oidc_metadata_client_r
+ 
+ 				const char *key;
+ 				json_t *value;
+-				json_object_foreach(json, key, value) {
++				void *iter = json_object_iter(json);
++				while(iter) {
++					key = json_object_iter_key(iter);
++					value = json_object_iter_value(iter);
+ 					json_object_set(data, key, value);
++					iter = json_object_iter_next(json, iter);
+ 				}
+-
+ 			}
+ 
+ 			json_decref(json);

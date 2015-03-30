@@ -1,0 +1,29 @@
+FROM centos:centos7
+MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
+
+# setup base libraries
+RUN yum update -y
+RUN yum install -y rpm-build gcc tar git autoconf automake libtool make
+
+# epel
+RUN rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+
+# setup rpmbuild environment
+WORKDIR /opt/rpmbuild
+ENV HOME /opt/rpmbuild
+RUN mkdir -p $HOME/rpm/{BUILD,SRPMS,SPECS,SOURCES,RPMS}
+RUN echo "%_topdir $HOME/rpm" > ~/.rpmmacros
+
+# mod_auth_openidc depends
+RUN yum install --enablerepo=centosplus -y openssl-devel 
+RUN yum install --enablerepo=epel -y jansson-devel
+RUN yum install -y httpd httpd-devel curl-devel hiredis-devel pcre-devel
+
+# build mod_auth_openidc rpm
+RUN curl -o $HOME/rpm/SOURCES/mod_auth_openidc-1.8.0.tar.gz https://mod-auth-openidc.org/download/libapache2-mod-auth-openidc_1.8.0.orig.tar.gz
+
+ADD mod_auth_openidc.spec $HOME/rpm/SPECS/mod_auth_openidc.spec
+ENV HIREDIS_LIBS -lhiredis
+RUN rpmbuild -bb $HOME/rpm/SPECS/mod_auth_openidc.spec
+
