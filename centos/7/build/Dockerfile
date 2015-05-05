@@ -1,6 +1,8 @@
 FROM centos:centos7
 MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
 
+ENV VERSION 1.8.1
+
 # setup base libraries
 RUN yum update -y
 RUN yum install -y rpm-build gcc tar git autoconf automake libtool make
@@ -21,7 +23,7 @@ RUN yum install --enablerepo=epel -y jansson-devel
 RUN yum install -y httpd httpd-devel curl-devel hiredis-devel pcre-devel
 
 # build mod_auth_openidc rpm
-RUN curl -o $HOME/rpm/SOURCES/mod_auth_openidc-1.8.0.tar.gz https://mod-auth-openidc.org/download/libapache2-mod-auth-openidc_1.8.0.orig.tar.gz
+RUN curl -o $HOME/rpm/SOURCES/mod_auth_openidc-${VERSION}.tar.gz https://mod-auth-openidc.org/download/libapache2-mod-auth-openidc_${VERSION}.orig.tar.gz
 
 ADD mod_auth_openidc.spec $HOME/rpm/SPECS/mod_auth_openidc.spec
 ENV HIREDIS_LIBS -lhiredis

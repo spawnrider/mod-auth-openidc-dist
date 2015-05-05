@@ -1,4 +1,4 @@
-FROM ubuntu:precise
+FROM ubuntu:trusty
 MAINTAINER hzandbelt@pingidentity.com
 
 ENV VERSION 1.8.1
@@ -14,6 +14,4 @@ RUN tar zxvf ${PKG}
 ADD debian /root/mod_auth_openidc-${VERSION}/debian
 
 WORKDIR /root/mod_auth_openidc-${VERSION}
-#RUN linux32 dpkg-buildpackage -uc -us -ai386
-#RUN debuild -sa
 RUN dpkg-buildpackage -uc -us
