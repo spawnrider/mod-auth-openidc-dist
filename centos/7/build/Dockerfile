@@ -27,5 +27,5 @@ RUN curl -o $HOME/rpm/SOURCES/mod_auth_openidc-${VERSION}.tar.gz https://mod-aut
 
 ADD mod_auth_openidc.spec $HOME/rpm/SPECS/mod_auth_openidc.spec
 ENV HIREDIS_LIBS -lhiredis
-RUN rpmbuild -bb $HOME/rpm/SPECS/mod_auth_openidc.spec
+RUN rpmbuild --define "release ${VERSION}" -bb $HOME/rpm/SPECS/mod_auth_openidc.spec
 

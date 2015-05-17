@@ -1,5 +1,5 @@
 Name:		mod_auth_openidc
-Version:	1.8.1
+Version:	%{release}
 Release:	1%{?dist}
 Summary:	Authentication/Authorization module for the Apache 2.x HTTP server that allows users to authenticate using an OpenID Connect enabled Identity Provider
 
@@ -41,29 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/httpd/conf.modules.d/10-auth_openidc.conf
 
 %changelog
-* Tue May 5 2015 Hans Zandbelt <hzandbelt@pingidentity.com> 1.8.1-1
-- Release 1.8.1.
-
-* Thu Feb 26 2015 Hans Zandbelt <hzandbelt@pingidentity.com> 1.8.0-1
-- Release 1.8.0.
-
-* Thu Feb 5 2015 Hans Zandbelt <hzandbelt@pingidentity.com> 1.7.3-1
-- Release 1.7.3.
-
-* Wed Jan 21 2015 Hans Zandbelt <hzandbelt@pingidentity.com> 1.7.2-1
-- Release 1.7.2.
-
-* Fri Dec 12 2014 Hans Zandbelt <hzandbelt@pingidentity.com> 1.7.1-1
-- Release 1.7.1.
-
-* Thu Nov 6 2014 Hans Zandbelt <hzandbelt@pingidentity.com> 1.7.0-1
-- Release 1.7.0.
-
-* Fri Aug 29 2014 Terry Fleury <terrencegf@gmail.com> 1.5.5-1
-- Release 1.5.5.
-
-* Thu Aug 14 2014 Hiroyuki Wada <wadahiro@gmail.com> 1.5.4-1
-- Release 1.5.4.
-
-* Sat Jul 26 2014 Hiroyuki Wada <wadahiro@gmail.com> 1.5.2-1
-- Initial packaging for CentOS6/RHEL6.

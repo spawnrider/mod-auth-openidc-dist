@@ -26,4 +26,4 @@ RUN yum install -y httpd httpd-devel curl-devel hiredis-devel pcre-devel
 RUN curl -o $HOME/rpm/SOURCES/mod_auth_openidc-${VERSION}.tar.gz https://mod-auth-openidc.org/download/libapache2-mod-auth-openidc_${VERSION}.orig.tar.gz
 ADD mod_auth_openidc.spec $HOME/rpm/SPECS/mod_auth_openidc.spec
 ENV HIREDIS_LIBS -lhiredis
-RUN rpmbuild -bb $HOME/rpm/SPECS/mod_auth_openidc.spec
+RUN rpmbuild --define "release ${VERSION}" -bb $HOME/rpm/SPECS/mod_auth_openidc.spec
