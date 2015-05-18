@@ -9,7 +9,7 @@ ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}ubuntu1~precise+1_am
 
 RUN apt-get update
 RUN apt-get install -y curl apache2 libjansson4
-RUN curl -s -L -o ~/${PKG} https://mod-auth-openidc.org/downloads/${PKG}
+RUN curl -s -L -o ~/${PKG} https://mod-auth-openidc.org/download/${PKG}
 RUN dpkg -i ~/${PKG} && echo ok || echo ko
 #RUN apt-get install -y -f
 
