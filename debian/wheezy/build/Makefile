@@ -1,4 +1,4 @@
-all: deb-upload
+all: deb-copy
 
 clean: deb-clean
 
