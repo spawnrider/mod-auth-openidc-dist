@@ -1,23 +1,5 @@
-libapache2-mod-auth-openidc (1.8.1-1ubuntu1~precise+1) precise; urgency=low
+libapache2-mod-auth-openidc (1.8.2-1ubuntu1~precise+1) precise; urgency=low
 
   * backport to precise
 
- -- Hans Zandbelt <hzandbelt@pingidentity.com>  Tue, 05 May 2015 11:55:11 +0200
-
-libapache2-mod-auth-openidc (1.8.1-1) unstable; urgency=medium
-
-  * avoid timing attacks; build with OpenSSL < 1.0
-
- -- Hans Zandbelt <zandbelt@zandbelt.net>  Tue, 05 May 2015 11:40:13 +0200
-
-libapache2-mod-auth-openidc (1.8.0-1ubuntu1~precise+1) precise; urgency=low
-
-  * backport to precise
-
- -- root <root@2eee195fdb04>  Sat, 28 Mar 2015 10:26:01 +0000
-
-libapache2-mod-auth-openidc (1.8.0-1) unstable; urgency=medium
-
-  * new upstream release
-
- -- Hans Zandbelt <hzandbelt@pingidentity.com>  Thu, 26 Feb 2015 16:21:02 +0100
+ -- Hans Zandbelt <hzandbelt@pingidentity.com>  Mon, 18 May 2015 11:55:11 +0200

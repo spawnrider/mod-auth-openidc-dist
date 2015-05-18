@@ -1,7 +1,7 @@
 FROM ubuntu:precise
 MAINTAINER hzandbelt@pingidentity.com
 
-ENV VERSION 1.8.1
+ENV VERSION 1.8.2
 ENV PKG libapache2-mod-auth-openidc_${VERSION}.orig.tar.gz
 
 RUN apt-get update

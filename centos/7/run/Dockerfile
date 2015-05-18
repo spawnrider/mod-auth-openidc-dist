@@ -3,7 +3,7 @@ MAINTAINER hzandbelt@pingidentity.com
 
 # CentOS Linux release 7.0.1406 (Core)
 
-ENV VERSION 1.8.1
+ENV VERSION 1.8.2
 ENV PATCHLEVEL 1
 ENV PKG mod_auth_openidc-${VERSION}-${PATCHLEVEL}.el7.centos.x86_64.rpm
 
