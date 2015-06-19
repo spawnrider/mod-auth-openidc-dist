@@ -3,7 +3,7 @@ MAINTAINER hzandbelt@pingidentity.com
 
 # CentOS release 6.6 (Final)
 
-ENV VERSION 1.8.2
+ENV VERSION 1.8.3
 ENV PATCHLEVEL 1
 ENV PKG mod_auth_openidc-${VERSION}-${PATCHLEVEL}.el6.x86_64.rpm
 
