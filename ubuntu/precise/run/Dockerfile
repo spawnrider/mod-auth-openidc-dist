@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get install -y curl apache2 libjansson4
 RUN curl -s -L -o ~/${PKG} https://mod-auth-openidc.org/download/${PKG}
 RUN dpkg -i ~/${PKG} && echo ok || echo ko
-#RUN apt-get install -y -f
+RUN apt-get install -y -f
 
 ADD default /etc/apache2/sites-available/
 
