@@ -9,7 +9,7 @@ Homepage: https://github.com/pingidentity/mod_auth_openidc
 
 Package: libapache2-mod-auth-openidc
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, apache2-api-20120211
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: OpenID Connect authentication module for Apache
  mod_auth_openidc is an Apache module that authenticates users
  of a web site against an OpenID Connect Identity Provider or an
