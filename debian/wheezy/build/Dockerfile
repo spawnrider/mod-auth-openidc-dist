@@ -1,7 +1,7 @@
 FROM debian:wheezy
 MAINTAINER hzandbelt@pingidentity.com
 
-ENV VERSION 1.8.3
+ENV VERSION 1.8.4
 ENV PKG libapache2-mod-auth-openidc_${VERSION}.orig.tar.gz
 
 RUN apt-get update
