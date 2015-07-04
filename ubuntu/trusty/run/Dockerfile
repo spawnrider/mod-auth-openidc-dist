@@ -5,11 +5,13 @@ MAINTAINER hzandbelt@pingidentity.com
 
 ENV VERSION 1.8.4
 ENV PATCHLEVEL 1
-ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}_amd64.deb
+#ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}_amd64.deb
+ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}ubuntu1~trusty+1_amd64.deb
 
 RUN apt-get update && apt-get install -y curl apache2 libjansson4 libhiredis0.10
 RUN curl -s -L -o ~/${PKG} https://mod-auth-openidc.org/download/${PKG}
-RUN dpkg -i --ignore-depends=libpcre3 ~/${PKG}
+RUN dpkg -i ~/${PKG}
+#RUN dpkg -i --ignore-depends=libpcre3 ~/${PKG}
 # && echo ok || echo ko
 #RUN apt-get install -y -f
 
