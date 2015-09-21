@@ -1,9 +1,9 @@
 FROM tenforward/centos-i386
 MAINTAINER hzandbelt@pingidentity.com
 
-ENV VERSION 1.8.4
+ENV VERSION 1.8.5
 ENV PATCHLEVEL 1
-ENV PKG mod_auth_openidc-${VERSION}-${PATCHLEVEL}.el6.i386.rpm
+ENV PKG mod_auth_openidc-${VERSION}-${PATCHLEVEL}.el6.i686.rpm
 
 RUN linux32 rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6
 RUN linux32 rpm -ihv http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
