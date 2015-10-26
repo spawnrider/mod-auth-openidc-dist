@@ -1,7 +1,7 @@
 FROM tenforward/centos-i386
 MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
 
-ENV VERSION 1.8.5
+ENV VERSION 1.8.6
 
 # setup base libraries
 RUN linux32 yum update -y
