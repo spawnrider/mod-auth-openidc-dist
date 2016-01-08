@@ -3,7 +3,7 @@ MAINTAINER hzandbelt@pingidentity.com
 
 # Ubuntu 15.10
 
-ENV VERSION 1.8.6
+ENV VERSION 1.8.7
 ENV PKG libapache2-mod-auth-openidc_${VERSION}.orig.tar.gz
 
 RUN apt-get update
