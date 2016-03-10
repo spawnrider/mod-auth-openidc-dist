@@ -1,7 +1,7 @@
 FROM debian:stretch
 MAINTAINER hzandbelt@pingidentity.com
 
-ENV VERSION 1.8.7
+ENV VERSION 1.8.8
 ENV PATCHLEVEL 1
 #ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}_amd64.deb
 ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}~stretch+1_amd64.deb
