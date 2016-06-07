@@ -3,7 +3,7 @@ MAINTAINER hzandbelt@pingidentity.com
 
 # Ubuntu 12.04.5 LTS
 
-ENV VERSION 1.8.8
+ENV VERSION 1.8.9
 ENV PATCHLEVEL 1
 ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}~bpo70+1_amd64.deb
 

@@ -3,12 +3,12 @@ MAINTAINER hzandbelt@pingidentity.com
 
 # CentOS Linux release 7.0.1406 (Core)
 
-ENV VERSION 1.8.8
+ENV VERSION 1.8.9
 ENV PATCHLEVEL 1
 ENV PKG mod_auth_openidc-${VERSION}-${PATCHLEVEL}.el7.centos.x86_64.rpm
 
 RUN rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
-RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm
 
 RUN yum -y swap -- remove fakesystemd -- install systemd systemd-libs
 RUN yum -y update; yum clean all; \

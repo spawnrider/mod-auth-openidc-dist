@@ -1,7 +1,7 @@
 FROM centos:centos7
 MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
 
-ENV VERSION 1.8.8
+ENV VERSION 1.8.9
 
 # setup base libraries
 RUN yum update -y
@@ -9,7 +9,7 @@ RUN yum install -y rpm-build gcc tar git autoconf automake libtool make
 
 # epel
 RUN rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
-RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm
 
 # setup rpmbuild environment
 WORKDIR /opt/rpmbuild

@@ -1,5 +1,7 @@
-FROM debian:jessie
+FROM ubuntu:16.04
 MAINTAINER hzandbelt@pingidentity.com
+
+# Ubuntu 16.04
 
 ENV VERSION 1.8.9
 ENV PKG libapache2-mod-auth-openidc_${VERSION}.orig.tar.gz
@@ -14,5 +16,4 @@ RUN tar zxvf ${PKG}
 ADD debian /root/mod_auth_openidc-${VERSION}/debian
 
 WORKDIR /root/mod_auth_openidc-${VERSION}
-#RUN linux32 dpkg-buildpackage -uc -us -ai386
 RUN dpkg-buildpackage -uc -us
