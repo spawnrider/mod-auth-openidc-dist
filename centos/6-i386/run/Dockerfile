@@ -1,7 +1,7 @@
 FROM tenforward/centos-i386
 MAINTAINER hzandbelt@pingidentity.com
 
-ENV VERSION 1.8.9
+ENV VERSION 1.8.10
 ENV PATCHLEVEL 1
 ENV PKG mod_auth_openidc-${VERSION}-${PATCHLEVEL}.el6.i686.rpm
 

@@ -1,9 +1,9 @@
 FROM debian:wheezy
 MAINTAINER hzandbelt@pingidentity.com
 
-ENV VERSION 1.8.9
+ENV VERSION 1.8.10
 ENV PATCHLEVEL 1
-ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}~bpo70+1_amd64.deb
+ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}~bpo70+2_amd64.deb
 
 RUN apt-get update && apt-get install -y curl apache2 libjansson4 libhiredis0.10
 RUN curl -s -L -o ~/${PKG} https://mod-auth-openidc.org/download/${PKG}

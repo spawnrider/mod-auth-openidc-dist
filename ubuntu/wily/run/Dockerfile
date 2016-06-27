@@ -3,7 +3,7 @@ MAINTAINER hzandbelt@pingidentity.com
 
 # Ubuntu 15.10
 
-ENV VERSION 1.8.9
+ENV VERSION 1.8.10
 ENV PATCHLEVEL 1
 #ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}_amd64.deb
 ENV PKG libapache2-mod-auth-openidc_${VERSION}-${PATCHLEVEL}ubuntu1~wily+1_amd64.deb
