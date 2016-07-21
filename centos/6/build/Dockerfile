@@ -1,7 +1,7 @@
 FROM centos:centos6
 MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
 
-ENV VERSION 1.8.10
+ENV VERSION 1.8.10.1
 
 # setup base libraries
 RUN yum update -y
