@@ -1,0 +1,16 @@
+@CENTOS_6_DOCKER_INCLUDE@
+
+ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
+ENV CJOSE_VERSION @CJOSE_VERSION@
+
+ENV CJOSE_PKG cjose-${CJOSE_VERSION}-1.el6.x86_64.rpm
+RUN curl -s -L -o ~/${CJOSE_PKG} https://mod-auth-openidc.org/download/${CJOSE_PKG}
+RUN yum localinstall -y ~/${CJOSE_PKG}
+
+ENV PKG mod_auth_openidc-${MOD_AUTH_OPENIDC_VERSION}-1.el6.x86_64.rpm
+
+RUN curl -s -L -o ~/${PKG} https://mod-auth-openidc.org/download/${PKG}
+RUN yum localinstall -y ~/${PKG}
+
+ADD 000-default.conf /etc/httpd/conf.d/
+RUN service httpd start && curl -v http://localhost/protected/index.php 2>&1 | grep "Location:" | grep "accounts.google.com/o/oauth2/auth"
