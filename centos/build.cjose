@@ -5,4 +5,4 @@ ENV MOD_AUTH_OPENIDC_ORIG_TGZ libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VER
 # build cjose RPM
 RUN curl -o ${HOME}/rpm/SOURCES/${CJOSE_TGZ} https://mod-auth-openidc.org/download/${CJOSE_TGZ}
 ADD cjose.spec ${HOME}/rpm/SPECS/cjose.spec
-RUN rpmbuild --define "release ${CJOSE_VERSION}" -bb ${HOME}/rpm/SPECS/cjose.spec
+RUN ${CMD_PREFIX} rpmbuild --define "release ${CJOSE_VERSION}" -bb ${HOME}/rpm/SPECS/cjose.spec

@@ -5,5 +5,6 @@ rpm-upload-i386: build
 	scp *.rpm zandbelt@mod-auth-openidc.org:/var/www/mod-auth-openidc.org/download
 
 clean: rpm-clean
+	rm -f Dockerfile *.spec
 
 include ../../../Makefile.inc

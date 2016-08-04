@@ -17,22 +17,22 @@ This module enables an Apache 2.x web server to operate as an OpenID Connect Rel
 %prep
 %setup -q
 
+%define debug_package %{nil}
 %build
 export APXS2_OPTS="-S LIBEXECDIR=$RPM_BUILD_ROOT%{_libdir}/httpd/modules/" 
 autoreconf
 %configure
 make
 
-%install
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
-make install
-# mv %{_libdir}/httpd/modules/mod_auth_openidc.so $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%changelog
 
 %files
 %doc LICENSE.txt ChangeLog 
 %{_libdir}/httpd/modules/mod_auth_openidc.so
 
-%changelog
+%install
+mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
+make install

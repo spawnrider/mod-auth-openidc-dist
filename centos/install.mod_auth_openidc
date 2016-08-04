@@ -1,2 +1,2 @@
 RUN curl -s -L -o ~/${MOD_AUTH_OPENIDC_PKG} https://mod-auth-openidc.org/download/${MOD_AUTH_OPENIDC_PKG}
-RUN yum localinstall -y ~/${MOD_AUTH_OPENIDC_PKG}
+RUN ${CMD_PREFIX} yum localinstall -y ~/${MOD_AUTH_OPENIDC_PKG}

@@ -13,6 +13,9 @@ CENTOS_MOD_AUTH_OPENIDC_SPEC_INC=$srcdir/centos/mod_auth_openidc.spec.inc
 AC_SUBST_FILE([CENTOS_6_INC])
 CENTOS_6_INC=$srcdir/centos/6/centos6.inc
 
+AC_SUBST_FILE([CENTOS_6_I386_INC])
+CENTOS_6_I386_INC=$srcdir/centos/6-i386/centos6-i386.inc
+
 AC_SUBST_FILE([CENTOS_7_INC])
 CENTOS_7_INC=$srcdir/centos/7/centos7.inc
 
@@ -33,6 +36,9 @@ CENTOS_INSTALL_MOD_AUTH_OPENIDC=$srcdir/centos/install.mod_auth_openidc
 
 AC_CONFIG_FILES([centos/6/build/cjose.spec centos/6/build/mod_auth_openidc.spec centos/6/build/Dockerfile])
 AC_CONFIG_FILES([centos/6/run/Dockerfile])
+
+AC_CONFIG_FILES([centos/6-i386/build/cjose.spec centos/6-i386/build/mod_auth_openidc.spec centos/6-i386/build/Dockerfile])
+AC_CONFIG_FILES([centos/6-i386/run/Dockerfile])
 
 AC_CONFIG_FILES([centos/7/build/cjose.spec centos/7/build/mod_auth_openidc.spec centos/7/build/Dockerfile])
 AC_CONFIG_FILES([centos/7/run/Dockerfile])
