@@ -1,0 +1,5 @@
+libapache2-mod-auth-openidc (@MOD_AUTH_OPENIDC_VERSION@-1ubuntu1~wily+1) trusty; urgency=medium
+
+  * 
+
+ -- Hans Zandbelt <hzandbelt@pingidentity.com>  Mon, 01 Jan 2015 00:00:00 +0200

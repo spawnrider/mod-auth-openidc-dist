@@ -97,6 +97,38 @@ AC_CONFIG_FILES([debian/stretch/build/debian-cjose/changelog debian/stretch/buil
 AC_CONFIG_FILES([debian/stretch/run/Dockerfile])
 
 #
+# Ubuntu
+#
+
+# Ubuntu Precise
+
+AC_CONFIG_FILES([ubuntu/precise/run/Dockerfile])
+
+# Ubuntu Trusty
+
+AC_SUBST_FILE([UBUNTU_TRUSTY_INC])
+UBUNTU_TRUSTY_INC=$srcdir/ubuntu/trusty/trusty.inc
+
+AC_CONFIG_FILES([ubuntu/trusty/build/debian-cjose/changelog ubuntu/trusty/build/debian-mod_auth_openidc/changelog ubuntu/trusty/build/Dockerfile])
+AC_CONFIG_FILES([ubuntu/trusty/run/Dockerfile])
+
+# Ubuntu Vivid
+
+AC_CONFIG_FILES([ubuntu/vivid/run/Dockerfile])
+
+# Ubuntu Wily
+
+AC_SUBST_FILE([UBUNTU_WILY_INC])
+UBUNTU_WILY_INC=$srcdir/ubuntu/wily/wily.inc
+
+AC_CONFIG_FILES([ubuntu/wily/build/debian-cjose/changelog ubuntu/wily/build/debian-mod_auth_openidc/changelog ubuntu/wily/build/Dockerfile])
+AC_CONFIG_FILES([ubuntu/wily/run/Dockerfile])
+
+# Ubuntu Xenial
+
+AC_CONFIG_FILES([ubuntu/xenial/run/Dockerfile])
+
+#
 # the end
 #
 

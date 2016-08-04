@@ -1,4 +1,4 @@
-libapache2-mod-auth-openidc (1.8.10.1-1ubuntu1~trusty+1) trusty; urgency=medium
+libcjose (@CJOSE_VERSION@-1ubuntu1~trusty+1) trusty; urgency=medium
 
   * 
 

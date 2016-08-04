@@ -10,12 +10,4 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ --with apache2
-
-override_dh_installchangelogs:
-	dh_installchangelogs ChangeLog
-
-override_dh_apache2:
-	dh_apache2 --noscripts
-
-override_dh_auto_install:
+	dh $@

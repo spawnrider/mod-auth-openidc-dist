@@ -1,0 +1,11 @@
+Source: libcjose
+Priority: extra
+Maintainer: Hans Zandbelt <hzandbelt@pingidentity.com>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, libssl-dev, libjansson-dev, pkg-config
+Standards-Version: 3.9.6
+Section: web
+
+Package: libcjose
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: cjose
