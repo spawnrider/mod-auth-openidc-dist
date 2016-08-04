@@ -17,27 +17,27 @@ This module enables an Apache 2.x web server to operate as an OpenID Connect Rel
 %prep
 %setup -q
 
+%define debug_package %{nil}
 %build
 export APXS2_OPTS="-S LIBEXECDIR=$RPM_BUILD_ROOT%{_libdir}/httpd/modules/" 
 autoreconf
 %configure
 make
 
-%install
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
-make install
-# mv %{_libdir}/httpd/modules/mod_auth_openidc.so $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
-
-install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d
-echo 'LoadModule auth_openidc_module modules/mod_auth_openidc.so' > \
-       $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d/10-auth_openidc.conf 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%changelog
 
 %files
 %doc LICENSE.txt ChangeLog 
 %{_libdir}/httpd/modules/mod_auth_openidc.so
 %config(noreplace) %{_sysconfdir}/httpd/conf.modules.d/10-auth_openidc.conf
 
-%changelog
+%install
+mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
+make install
+
+install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d
+echo 'LoadModule auth_openidc_module modules/mod_auth_openidc.so' > \
+       $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d/10-auth_openidc.conf 

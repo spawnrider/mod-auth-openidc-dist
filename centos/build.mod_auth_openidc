@@ -1,0 +1,8 @@
+ENV MOD_AUTH_OPENIDC_TGZ mod_auth_openidc-${MOD_AUTH_OPENIDC_VERSION}.tar.gz
+ENV MOD_AUTH_OPENIDC_ORIG_TGZ libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}.orig.tar.gz
+
+# build mod_auth_openidc RPM
+RUN curl -o ${HOME}/rpm/SOURCES/${MOD_AUTH_OPENIDC_TGZ} https://mod-auth-openidc.org/download/${MOD_AUTH_OPENIDC_ORIG_TGZ}
+ADD mod_auth_openidc.spec ${HOME}/rpm/SPECS/mod_auth_openidc.spec
+ENV HIREDIS_LIBS -lhiredis
+RUN rpmbuild --define "release ${MOD_AUTH_OPENIDC_VERSION}" -bb ${HOME}/rpm/SPECS/mod_auth_openidc.spec

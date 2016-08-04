@@ -9,7 +9,7 @@ URL:		https://github.com/cisco/cjose
 Source0:        cjose-%{version}.tar.gz
 
 Requires:       openssl, jansson
-BuildRequires:	openssl-devel, jansson-devel
+BuildRequires:	openssl-devel, jansson-devel, check-devel
 
 %description
 JOSE implementation for C
@@ -17,10 +17,11 @@ JOSE implementation for C
 %prep
 %setup -q
 
+%define debug_package %{nil}
 %build
 
 %configure
-make
+make test
 
 %install
 %make_install 
@@ -44,5 +45,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libcjose.so.0
 %{_libdir}/libcjose.so.0.0.0
 %{_libdir}/pkgconfig/cjose.pc
- 
+
 %changelog

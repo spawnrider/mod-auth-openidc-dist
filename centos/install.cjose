@@ -1,0 +1,2 @@
+RUN curl -s -L -o ~/${CJOSE_PKG} https://mod-auth-openidc.org/download/${CJOSE_PKG}
+RUN yum localinstall -y ~/${CJOSE_PKG}

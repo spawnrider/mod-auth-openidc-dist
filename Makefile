@@ -29,8 +29,9 @@ clean:
 	@for DIST in $(DISTS) ; do \
 	  VERSIONS=`find $$DIST -type d -depth 1 -print` ; \
 	    for VERSION in $$VERSIONS ; do \
-	      if [ -x $$VERSION/build ] ; then \
-	        $(MAKE) -C $$VERSION/build clean || exit 1; \
-	      fi \
+	      for ACTION in $(ACTIONS) ; do \
+	        if [ -x $$VERSION/$$ACTION ] ; then \
+	          $(MAKE) -C $$VERSION/$$ACTION clean || exit 1; \
+	       	fi \
 	    done \
 	done

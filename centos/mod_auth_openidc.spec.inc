@@ -32,7 +32,3 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %doc LICENSE.txt ChangeLog 
 %{_libdir}/httpd/modules/mod_auth_openidc.so
-
-%install
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
-make install

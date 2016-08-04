@@ -1,0 +1,10 @@
+@CENTOS_MOD_AUTH_OPENIDC_SPEC_INC@
+%config(noreplace) %{_sysconfdir}/httpd/conf.modules.d/10-auth_openidc.conf
+
+%install
+mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
+make install
+
+install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d
+echo 'LoadModule auth_openidc_module modules/mod_auth_openidc.so' > \
+       $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d/10-auth_openidc.conf 

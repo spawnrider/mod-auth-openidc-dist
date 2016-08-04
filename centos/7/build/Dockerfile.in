@@ -1,4 +1,4 @@
-@CENTOS_6_INC@
+@CENTOS_7_INC@
 
 @CENTOS_BUILD@
 
@@ -8,6 +8,6 @@ ENV CJOSE_VERSION @CJOSE_VERSION@
 @CENTOS_BUILD_CJOSE@
 
 #install cjose RPM
-RUN yum localinstall -y /opt/rpmbuild/rpm/RPMS/x86_64/cjose-${CJOSE_VERSION}-1.el6.x86_64.rpm
+RUN yum localinstall -y /opt/rpmbuild/rpm/RPMS/x86_64/cjose-${CJOSE_VERSION}-1.el7.centos.x86_64.rpm
 
 @CENTOS_BUILD_MOD_AUTH_OPENIDC@

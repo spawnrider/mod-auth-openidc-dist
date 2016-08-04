@@ -1,15 +1,7 @@
-FROM centos:centos7
-MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
+@CENTOS_7_INC@
 
-# CentOS Linux release 7.0.1406 (Core)
-
-RUN rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
-RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm
-
-RUN yum update -y
-
-ENV MOD_AUTH_OPENIDC_VERSION 2.0.0rc0
-ENV CJOSE_VERSION 0.4.1
+ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
+ENV CJOSE_VERSION @CJOSE_VERSION@
 
 RUN yum -y swap -- remove fakesystemd -- install systemd systemd-libs
 RUN yum -y update; yum clean all; \
@@ -27,12 +19,10 @@ CMD ["/usr/sbin/init"]
 #RUN yum install -y httpd
 
 ENV CJOSE_PKG cjose-${CJOSE_VERSION}-1.el7.centos.x86_64.rpm
-RUN curl -s -L -o ~/${CJOSE_PKG} https://mod-auth-openidc.org/download/${CJOSE_PKG}
-RUN yum localinstall -y ~/${CJOSE_PKG}
+@CENTOS_INSTALL_CJOSE@
 
 ENV MOD_AUTH_OPENIDC_PKG mod_auth_openidc-${MOD_AUTH_OPENIDC_VERSION}-1.el7.centos.x86_64.rpm
-RUN curl -s -L -o ~/${MOD_AUTH_OPENIDC_PKG} https://mod-auth-openidc.org/download/${MOD_AUTH_OPENIDC_PKG}
-RUN yum localinstall -y ~/${MOD_AUTH_OPENIDC_PKG}
+@CENTOS_INSTALL_MOD_AUTH_OPENIDC@
 
 ADD 000-default.conf /etc/httpd/conf.d/
 RUN /usr/sbin/httpd && curl -v http://localhost/protected/index.php 2>&1 | grep "Location:" | grep "accounts.google.com/o/oauth2/auth"
