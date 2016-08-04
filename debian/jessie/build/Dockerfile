@@ -8,7 +8,7 @@ RUN echo "Acquire::http::Timeout \"90\";" > /etc/apt/apt.conf.d/99timeout
 
 RUN apt-get install -y build-essential devscripts dh-make pkg-config util-linux
 RUN apt-get install -y gcc tar autoconf automake libtool
-RUN apt-get install -y libssl-dev libcurl4-openssl-dev libjansson-dev libhiredis-dev libpcre3-dev apache2-dev check
+RUN apt-get install -y libssl-dev libcurl4-openssl-dev libjansson-dev libhiredis-dev libpcre3-dev check
 
 ENV DEB_BUILD_OPTIONS noddebs
 
@@ -29,6 +29,7 @@ RUN dpkg-buildpackage -uc -us
 #install cjose
 RUN dpkg -i ~/libcjose_${CJOSE_VERSION}-1_amd64.deb
 
+RUN apt-get install -y apache2-dev
 
 ENV MOD_AUTH_OPENIDC_ORIG_TGZ libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}.orig.tar.gz
 

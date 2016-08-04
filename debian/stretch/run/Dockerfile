@@ -21,6 +21,5 @@ RUN dpkg -i ~/${MOD_AUTH_OPENIDC_PKG}
 RUN apt-get install -y -f
 
 ADD 000-default.conf /etc/apache2/sites-available/
-
 RUN a2enmod auth_openidc
 RUN service apache2 start && curl -v http://localhost/protected/index.php 2>&1 | grep "Location:" | grep "accounts.google.com/o/oauth2/auth"

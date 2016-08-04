@@ -1,15 +1,15 @@
-@DEBIAN_STRETCH_INC@
+@DEBIAN_WHEEZY_INC@
 
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 ENV CJOSE_VERSION @CJOSE_VERSION@
 
-ENV CJOSE_PKG libcjose_${CJOSE_VERSION}-1~stretch+1_amd64.deb
+ENV CJOSE_PKG libcjose_${CJOSE_VERSION}-1~bpo70+1_amd64.deb
 @DEBIAN_INSTALL_CJOSE@
 
-RUN apt-get install -y libhiredis0.13 libcurl3
-ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1~stretch+1_amd64.deb
+RUN apt-get install -y libhiredis0.10
+ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1~bpo70+1_amd64.deb
 @DEBIAN_INSTALL_MOD_AUTH_OPENIDC@
 
-ADD 000-default.conf /etc/apache2/sites-available/
+ADD default /etc/apache2/sites-available/
 RUN a2enmod auth_openidc
 RUN service apache2 start && curl -v http://localhost/protected/index.php 2>&1 | grep "Location:" | grep "accounts.google.com/o/oauth2/auth"

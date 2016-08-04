@@ -80,6 +80,14 @@ DEBIAN_JESSIE_INC=$srcdir/debian/jessie/jessie.inc
 AC_CONFIG_FILES([debian/jessie/build/debian-cjose/changelog debian/jessie/build/debian-mod_auth_openidc/changelog debian/jessie/build/Dockerfile])
 AC_CONFIG_FILES([debian/jessie/run/Dockerfile])
 
+# Debian Wheezy
+
+AC_SUBST_FILE([DEBIAN_WHEEZY_INC])
+DEBIAN_WHEEZY_INC=$srcdir/debian/wheezy/wheezy.inc
+
+AC_CONFIG_FILES([debian/wheezy/build/debian-cjose/changelog debian/wheezy/build/debian-mod_auth_openidc/changelog debian/wheezy/build/Dockerfile])
+AC_CONFIG_FILES([debian/wheezy/run/Dockerfile])
+
 # Debian Stretch
 
 AC_SUBST_FILE([DEBIAN_STRETCH_INC])

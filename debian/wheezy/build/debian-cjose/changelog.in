@@ -1,0 +1,12 @@
+libcjose (@CJOSE_VERSION@-1~bpo70+1) wheezy-backports; urgency=medium
+
+  * Rebuild for wheezy-backports.
+
+ -- Hans Zandbelt <hzandbelt@pingidentity.com>  Mon, 01 Jan 2015 00:00:00 +0200
+
+libcjose (@CJOSE_VERSION@-1) unstable; urgency=medium
+
+  * 
+
+ -- Hans Zandbelt <hzandbelt@pingidentity.com>  Mon, 01 Jan 2015 00:00:00 +0200
+ 
