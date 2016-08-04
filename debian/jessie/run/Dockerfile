@@ -13,8 +13,9 @@ RUN curl -s -L -o ~/${CJOSE_PKG} https://mod-auth-openidc.org/download/${CJOSE_P
 RUN dpkg -i ~/${CJOSE_PKG}
 RUN apt-get install -y -f
 
+RUN apt-get install -y libhiredis0.10
 ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1_amd64.deb
-RUN apt-get install -y apache2 libhiredis0.10
+RUN apt-get install -y apache2
 RUN curl -s -L -o ~/${MOD_AUTH_OPENIDC_PKG} https://mod-auth-openidc.org/download/${MOD_AUTH_OPENIDC_PKG}
 RUN dpkg -i ~/${MOD_AUTH_OPENIDC_PKG}
 RUN apt-get install -y -f

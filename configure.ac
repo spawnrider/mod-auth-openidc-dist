@@ -80,6 +80,14 @@ DEBIAN_JESSIE_INC=$srcdir/debian/jessie/jessie.inc
 AC_CONFIG_FILES([debian/jessie/build/debian-cjose/changelog debian/jessie/build/debian-mod_auth_openidc/changelog debian/jessie/build/Dockerfile])
 AC_CONFIG_FILES([debian/jessie/run/Dockerfile])
 
+# Debian Stretch
+
+AC_SUBST_FILE([DEBIAN_STRETCH_INC])
+DEBIAN_STRETCH_INC=$srcdir/debian/stretch/stretch.inc
+
+AC_CONFIG_FILES([debian/stretch/build/debian-cjose/changelog debian/stretch/build/debian-mod_auth_openidc/changelog debian/stretch/build/Dockerfile])
+AC_CONFIG_FILES([debian/stretch/run/Dockerfile])
+
 #
 # the end
 #
