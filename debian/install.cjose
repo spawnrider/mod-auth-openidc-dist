@@ -1,0 +1,4 @@
+RUN apt-get install -y libjansson4
+RUN curl -s -L -o ~/${CJOSE_PKG} https://mod-auth-openidc.org/download/${CJOSE_PKG}
+RUN dpkg -i ~/${CJOSE_PKG}
+RUN apt-get install -y -f

@@ -10,6 +10,9 @@ RUN_TAG     := mod_auth_openidc_run/$(DIST)-$(VERSION)
 build:
 	docker build -t $(BUILD_TAG) .
 
+build-nocache:
+	docker build --no-cache=true -t $(BUILD_TAG) .
+
 rpm-copy: build
 	docker run --rm -v $$PWD:/shared:rw -it $(BUILD_TAG) /bin/bash -c "cp /opt/rpmbuild/rpm/RPMS/x86_64/*.rpm /shared"
 
@@ -30,3 +33,7 @@ deb-clean:
 
 run:
 	docker build -t $(RUN_TAG) .
+
+run-nocache:
+	docker build --no-cache=true -t $(RUN_TAG) .
+	
