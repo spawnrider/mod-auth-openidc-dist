@@ -16,8 +16,6 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
 
-#RUN yum install -y httpd
-
 ENV CJOSE_PKG cjose-${CJOSE_VERSION}-1.el7.centos.x86_64.rpm
 @CENTOS_INSTALL_CJOSE@
 

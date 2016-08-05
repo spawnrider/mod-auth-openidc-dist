@@ -1,7 +1,7 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hzandbelt@pingidentity.com])
 
 #AC_SUBST([MOD_AUTH_OPENIDC_VERSION], 1.8.10.1)
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.0.0rc0])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.0.0rc1])
 AC_SUBST([CJOSE_VERSION], [0.4.1])
 
 #

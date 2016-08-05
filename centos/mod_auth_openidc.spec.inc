@@ -8,8 +8,8 @@ License:	Apache License Version 2.0
 URL:		https://github.com/pingidentity/mod_auth_openidc
 Source0:        mod_auth_openidc-%{version}.tar.gz
 
-Requires:       httpd, openssl, curl, jansson, hiredis, pcre
-BuildRequires:	httpd-devel, openssl-devel, curl-devel, jansson-devel, hiredis-devel, pcre-devel
+Requires:       httpd, openssl, curl, jansson, hiredis, pcre, cjose
+BuildRequires:	httpd-devel, openssl-devel, curl-devel, jansson-devel, hiredis-devel, pcre-devel, cjose
 
 %description
 This module enables an Apache 2.x web server to operate as an OpenID Connect Relying Party and/or OAuth 2.0 Resource Server.
@@ -22,7 +22,7 @@ This module enables an Apache 2.x web server to operate as an OpenID Connect Rel
 export APXS2_OPTS="-S LIBEXECDIR=$RPM_BUILD_ROOT%{_libdir}/httpd/modules/" 
 autoreconf
 %configure
-make
+make test
 
 %clean
 rm -rf $RPM_BUILD_ROOT
