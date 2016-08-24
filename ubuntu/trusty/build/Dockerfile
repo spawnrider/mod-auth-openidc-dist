@@ -14,7 +14,7 @@ RUN apt-get install -y libssl-dev libcurl4-openssl-dev libjansson-dev libhiredis
 
 ENV DEB_BUILD_OPTIONS noddebs
 
-ENV MOD_AUTH_OPENIDC_VERSION 2.0.0rc1
+ENV MOD_AUTH_OPENIDC_VERSION 2.0.0rc2
 ENV CJOSE_VERSION 0.4.1
 
 ENV CJOSE_TGZ cjose-${CJOSE_VERSION}.tar.gz
