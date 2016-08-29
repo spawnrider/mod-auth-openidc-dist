@@ -112,10 +112,6 @@ UBUNTU_TRUSTY_INC=$srcdir/ubuntu/trusty/trusty.inc
 AC_CONFIG_FILES([ubuntu/trusty/build/debian-cjose/changelog ubuntu/trusty/build/debian-mod_auth_openidc/changelog ubuntu/trusty/build/Dockerfile])
 AC_CONFIG_FILES([ubuntu/trusty/run/Dockerfile])
 
-# Ubuntu Vivid
-
-AC_CONFIG_FILES([ubuntu/vivid/run/Dockerfile])
-
 # Ubuntu Wily
 
 AC_SUBST_FILE([UBUNTU_WILY_INC])

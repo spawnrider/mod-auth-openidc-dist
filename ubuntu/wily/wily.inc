@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:wily
 MAINTAINER hzandbelt@pingidentity.com
 
 # Ubuntu 15.10
