@@ -33,5 +33,6 @@ clean:
 	        if [ -x $$VERSION/$$ACTION ] ; then \
 	          $(MAKE) -C $$VERSION/$$ACTION clean || exit 1; \
 	       	fi \
+	      done \
 	    done \
 	done
