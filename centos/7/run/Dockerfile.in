@@ -1,8 +1,5 @@
 @CENTOS_7_INC@
 
-ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
-ENV CJOSE_VERSION @CJOSE_VERSION@
-
 RUN yum -y swap -- remove fakesystemd -- install systemd systemd-libs
 RUN yum -y update; yum clean all; \
 (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
@@ -16,9 +13,11 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]
 
+ENV CJOSE_VERSION @CJOSE_VERSION@
 ENV CJOSE_PKG cjose-${CJOSE_VERSION}-1.el7.centos.x86_64.rpm
 @CENTOS_INSTALL_CJOSE@
 
+ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 ENV MOD_AUTH_OPENIDC_PKG mod_auth_openidc-${MOD_AUTH_OPENIDC_VERSION}-1.el7.centos.x86_64.rpm
 @CENTOS_INSTALL_MOD_AUTH_OPENIDC@
 
