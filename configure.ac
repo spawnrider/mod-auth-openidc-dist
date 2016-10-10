@@ -1,6 +1,6 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hzandbelt@pingidentity.com])
 
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.0.0])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.0.1rc4])
 AC_SUBST([CJOSE_VERSION], [0.4.1])
 
 #
@@ -122,6 +122,10 @@ AC_CONFIG_FILES([ubuntu/wily/run/Dockerfile])
 # Ubuntu Xenial
 
 AC_CONFIG_FILES([ubuntu/xenial/run/Dockerfile])
+
+# Ubuntu Yakkety
+
+AC_CONFIG_FILES([ubuntu/yakkety/run/Dockerfile])
 
 #
 # the end
