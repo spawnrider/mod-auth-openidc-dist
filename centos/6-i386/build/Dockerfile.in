@@ -8,5 +8,10 @@ ENV CJOSE_VERSION @CJOSE_VERSION@
 #install cjose RPM
 RUN ${CMD_PREFIX} yum localinstall -y /opt/rpmbuild/rpm/RPMS/i686/cjose-${CJOSE_VERSION}-1.el6.i686.rpm
 
+RUN curl -o hiredis-0.12.1-1.sdl6.i686.rpm http://springdale.math.ias.edu/data/puias/unsupported/6/i386/hiredis-0.12.1-1.sdl6.i686.rpm
+RUN yum localinstall -y hiredis-0.12.1-1.sdl6.i686.rpm
+RUN curl -o hiredis-devel-0.12.1-1.sdl6.i686.rpm http://springdale.math.ias.edu/data/puias/unsupported/6/i386/hiredis-devel-0.12.1-1.sdl6.i686.rpm
+RUN yum localinstall -y hiredis-devel-0.12.1-1.sdl6.i686.rpm
+
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 @CENTOS_BUILD_MOD_AUTH_OPENIDC@
