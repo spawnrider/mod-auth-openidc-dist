@@ -1,5 +1,5 @@
 FROM centos:centos7
-MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
+MAINTAINER Hans Zandbelt <hans.zandbelt@zmartzone.eu>
 
 # CentOS Linux release 7.0.1406 (Core)
 

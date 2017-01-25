@@ -1,5 +1,5 @@
 FROM centos:centos6
-MAINTAINER Hans Zandbelt <hzandbelt@pingidentity.com>
+MAINTAINER Hans Zandbelt <hans.zandbelt@zmartzone.eu>
 
 # CentOS release 6.8 (Final)
 

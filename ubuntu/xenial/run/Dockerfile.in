@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER hzandbelt@pingidentity.com
+MAINTAINER hans.zandbelt@zmartzone.eu
 
 # Ubuntu 16.04
 

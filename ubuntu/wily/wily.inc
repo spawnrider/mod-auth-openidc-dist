@@ -1,5 +1,5 @@
 FROM ubuntu:wily
-MAINTAINER hzandbelt@pingidentity.com
+MAINTAINER hans.zandbelt@zmartzone.eu
 
 # Ubuntu 15.10
 

@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER hzandbelt@pingidentity.com
+MAINTAINER hans.zandbelt@zmartzone.eu
 
 # Ubuntu 14.04 LTS
 
