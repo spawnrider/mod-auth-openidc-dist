@@ -1,5 +1,0 @@
-@CENTOS_MOD_AUTH_OPENIDC_SPEC_INC@
-
-%install
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
-make install
