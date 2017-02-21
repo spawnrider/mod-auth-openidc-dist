@@ -1,6 +1,6 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hans.zandbelt@zmartzone.eu])
 
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.1.5])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.1.6])
 AC_SUBST([CJOSE_VERSION], [0.4.1])
 
 #
@@ -35,14 +35,6 @@ CENTOS_6_INC=$srcdir/centos/6/centos6.inc
 
 AC_CONFIG_FILES([centos/6/build/cjose.spec centos/6/build/mod_auth_openidc.spec centos/6/build/Dockerfile])
 AC_CONFIG_FILES([centos/6/run/Dockerfile])
-
-# CentOS 6-i386
-
-AC_SUBST_FILE([CENTOS_6_I386_INC])
-CENTOS_6_I386_INC=$srcdir/centos/6-i386/centos6-i386.inc
-
-AC_CONFIG_FILES([centos/6-i386/build/cjose.spec centos/6-i386/build/mod_auth_openidc.spec centos/6-i386/build/Dockerfile])
-AC_CONFIG_FILES([centos/6-i386/run/Dockerfile])
 
 # CentOS 7
 
