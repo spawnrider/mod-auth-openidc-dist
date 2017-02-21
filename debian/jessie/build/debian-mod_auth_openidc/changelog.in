@@ -1,4 +1,4 @@
-libapache2-mod-auth-openidc (@MOD_AUTH_OPENIDC_VERSION@-1) unstable; urgency=medium
+libapache2-mod-auth-openidc (@MOD_AUTH_OPENIDC_VERSION@-1~jessie+1) jessie-backports; urgency=medium
 
   * 
 

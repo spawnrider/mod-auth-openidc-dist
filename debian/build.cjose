@@ -1,5 +1,5 @@
 ENV CJOSE_TGZ cjose-${CJOSE_VERSION}.tar.gz
-ENV CJOSE_ORIG_TGZ libcjose_${CJOSE_VERSION}.orig.tar.gz
+ENV CJOSE_ORIG_TGZ cjose_${CJOSE_VERSION}.orig.tar.gz
 
 WORKDIR /root
 RUN curl -o ${CJOSE_ORIG_TGZ} https://mod-auth-openidc.org/download/${CJOSE_TGZ}

@@ -1,4 +1,4 @@
-libcjose (@CJOSE_VERSION@-1) unstable; urgency=medium
+cjose (@CJOSE_VERSION@-1~jessie+1) jessie-backports; urgency=medium
 
   * 
 

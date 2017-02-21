@@ -1,4 +1,4 @@
-libcjose (@CJOSE_VERSION@-1ubuntu1~trusty+1) trusty; urgency=medium
+cjose (@CJOSE_VERSION@-1~trusty+1) trusty; urgency=medium
 
   * 
 

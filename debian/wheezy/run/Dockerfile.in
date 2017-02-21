@@ -1,12 +1,13 @@
 @DEBIAN_WHEEZY_INC@
 
 ENV CJOSE_VERSION @CJOSE_VERSION@
-ENV CJOSE_PKG libcjose_${CJOSE_VERSION}-1~bpo70+1_amd64.deb
+ENV CJOSE_PKG libcjose0_${CJOSE_VERSION}-1~wheezy+1_amd64.deb
+
 @DEBIAN_INSTALL_CJOSE@
 
 RUN apt-get update && apt-get install -y libhiredis0.10
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
-ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1~bpo70+1_amd64.deb
+ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1~wheezy+1_amd64.deb
 @DEBIAN_INSTALL_MOD_AUTH_OPENIDC@
 
 ADD default /etc/apache2/sites-available/

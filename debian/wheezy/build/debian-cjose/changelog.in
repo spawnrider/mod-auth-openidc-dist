@@ -1,10 +1,10 @@
-libcjose (@CJOSE_VERSION@-1~bpo70+1) wheezy-backports; urgency=medium
+cjose (@CJOSE_VERSION@-1~wheezy+1) wheezy-backports; urgency=medium
 
   * Rebuild for wheezy-backports.
 
  -- Hans Zandbelt <hans.zandbelt@zmartzone.eu>  Mon, 01 Jan 2015 00:00:00 +0200
 
-libcjose (@CJOSE_VERSION@-1) unstable; urgency=medium
+cjose (@CJOSE_VERSION@-1) unstable; urgency=medium
 
   * 
 

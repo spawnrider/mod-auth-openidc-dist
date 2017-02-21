@@ -1,7 +1,7 @@
 @DEBIAN_STRETCH_INC@
 
 ENV CJOSE_VERSION @CJOSE_VERSION@
-ENV CJOSE_PKG libcjose_${CJOSE_VERSION}-1~stretch+1_amd64.deb
+ENV CJOSE_PKG libcjose0_${CJOSE_VERSION}-1~stretch+1_amd64.deb
 @DEBIAN_INSTALL_CJOSE@
 
 RUN apt-get update && apt-get install -y libhiredis0.13 libcurl3
