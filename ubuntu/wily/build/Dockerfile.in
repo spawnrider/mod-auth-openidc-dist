@@ -9,6 +9,11 @@ ENV CJOSE_VERSION @CJOSE_VERSION@
 RUN dpkg -i ~/libcjose0_${CJOSE_VERSION}-1~wily+1_amd64.deb
 RUN dpkg -i ~/libcjose-dev_${CJOSE_VERSION}-1~wily+1_amd64.deb
 
+RUN apt-get update && apt-get install -y debian-keyring debian-archive-keyring
+RUN echo "deb http://ftp.debian.org/debian stretch main" > /etc/apt/sources.list.d/stretch.list
+RUN apt-get update && apt-get -t stretch install -y libjq1 libjq-dev
+RUN mv /etc/apt/sources.list.d/stretch.list /etc/apt/sources.list.d/stretch.list.backup
+
 RUN apt-get update && apt-get install -y apache2-dev
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 @DEBIAN_BUILD_MOD_AUTH_OPENIDC@

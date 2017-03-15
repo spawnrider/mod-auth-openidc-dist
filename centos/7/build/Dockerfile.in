@@ -8,7 +8,7 @@ ENV CJOSE_VERSION @CJOSE_VERSION@
 #install cjose RPM
 RUN yum localinstall -y /opt/rpmbuild/rpm/RPMS/x86_64/cjose-${CJOSE_VERSION}-1.el7.centos.x86_64.rpm
 
-RUN yum install -y hiredis-devel
+RUN yum install -y hiredis-devel jq-devel
 
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 @CENTOS_BUILD_MOD_AUTH_OPENIDC@

@@ -9,6 +9,9 @@ ENV CJOSE_VERSION @CJOSE_VERSION@
 RUN dpkg -i ~/libcjose0_${CJOSE_VERSION}-1~jessie+1_amd64.deb
 RUN dpkg -i ~/libcjose-dev_${CJOSE_VERSION}-1~jessie+1_amd64.deb
 
+RUN echo "deb http://ftp.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list
+RUN apt-get update && apt-get -t jessie-backports install -y libjq-dev
+
 RUN apt-get update && apt-get install -y apache2-dev
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 @DEBIAN_BUILD_MOD_AUTH_OPENIDC@

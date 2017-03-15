@@ -5,6 +5,12 @@ ENV CJOSE_PKG libcjose0_${CJOSE_VERSION}-1~trusty+1_amd64.deb
 @DEBIAN_INSTALL_CJOSE@
 
 RUN apt-get update && apt-get install -y libhiredis0.10
+
+RUN apt-get update && apt-get install -y debian-keyring debian-archive-keyring
+RUN echo "deb http://ftp.debian.org/debian stretch main" > /etc/apt/sources.list.d/stretch.list
+RUN apt-get update && apt-get -t stretch install -y libjq1
+RUN mv /etc/apt/sources.list.d/stretch.list /etc/apt/sources.list.d/stretch.list.backup
+
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1~trusty+1_amd64.deb
 @DEBIAN_INSTALL_MOD_AUTH_OPENIDC@
