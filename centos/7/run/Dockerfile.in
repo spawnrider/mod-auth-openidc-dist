@@ -21,5 +21,10 @@ ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
 ENV MOD_AUTH_OPENIDC_PKG mod_auth_openidc-${MOD_AUTH_OPENIDC_VERSION}-1.el7.centos.x86_64.rpm
 @CENTOS_INSTALL_MOD_AUTH_OPENIDC@
 
+ENV MOD_TOKEN_BINDING_VERSION @MOD_TOKEN_BINDING_VERSION@
+ENV MOD_TOKEN_BINDING_PKG mod_token_binding-${MOD_TOKEN_BINDING_VERSION}-1.el7.centos.x86_64.rpm
+@CENTOS_INSTALL_MOD_TOKEN_BINDING@
+
 ADD 000-default.conf /etc/httpd/conf.d/
 RUN /usr/sbin/httpd && curl -v http://localhost/protected/index.php 2>&1 | grep "Location:" | grep "accounts.google.com/o/oauth2/auth"
+RUN cat /var/log/httpd/error.log | grep mod_token_binding

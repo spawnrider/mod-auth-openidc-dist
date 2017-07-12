@@ -1,7 +1,8 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hans.zandbelt@zmartzone.eu])
 
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.0])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.1rc3])
 AC_SUBST([CJOSE_VERSION], [0.5.1])
+AC_SUBST([MOD_TOKEN_BINDING_VERSION], [0.3.0])
 
 #
 # CentOS
@@ -13,6 +14,9 @@ CENTOS_CJOSE_SPEC_INC=$srcdir/centos/cjose.spec.inc
 AC_SUBST_FILE([CENTOS_MOD_AUTH_OPENIDC_SPEC_INC])
 CENTOS_MOD_AUTH_OPENIDC_SPEC_INC=$srcdir/centos/mod_auth_openidc.spec.inc
 
+AC_SUBST_FILE([CENTOS_MOD_TOKEN_BINDING_SPEC_INC])
+CENTOS_MOD_TOKEN_BINDING_SPEC_INC=$srcdir/centos/mod_token_binding.spec.inc
+
 AC_SUBST_FILE([CENTOS_BUILD])
 CENTOS_BUILD=$srcdir/centos/build.inc
 
@@ -22,18 +26,24 @@ CENTOS_BUILD_CJOSE=$srcdir/centos/build.cjose
 AC_SUBST_FILE([CENTOS_BUILD_MOD_AUTH_OPENIDC])
 CENTOS_BUILD_MOD_AUTH_OPENIDC=$srcdir/centos/build.mod_auth_openidc
 
+AC_SUBST_FILE([CENTOS_BUILD_MOD_TOKEN_BINDING])
+CENTOS_BUILD_MOD_TOKEN_BINDING=$srcdir/centos/build.mod_token_binding
+
 AC_SUBST_FILE([CENTOS_INSTALL_CJOSE])
 CENTOS_INSTALL_CJOSE=$srcdir/centos/install.cjose
 
 AC_SUBST_FILE([CENTOS_INSTALL_MOD_AUTH_OPENIDC])
 CENTOS_INSTALL_MOD_AUTH_OPENIDC=$srcdir/centos/install.mod_auth_openidc
 
+AC_SUBST_FILE([CENTOS_INSTALL_MOD_TOKEN_BINDING])
+CENTOS_INSTALL_MOD_TOKEN_BINDING=$srcdir/centos/install.mod_token_binding
+
 # CentOS 6
 
 AC_SUBST_FILE([CENTOS_6_INC])
 CENTOS_6_INC=$srcdir/centos/6/centos6.inc
 
-AC_CONFIG_FILES([centos/6/build/cjose.spec centos/6/build/mod_auth_openidc.spec centos/6/build/Dockerfile])
+AC_CONFIG_FILES([centos/6/build/cjose.spec centos/6/build/mod_auth_openidc.spec centos/6/build/mod_token_binding.spec centos/6/build/Dockerfile])
 AC_CONFIG_FILES([centos/6/run/Dockerfile])
 
 # CentOS 7
@@ -41,7 +51,7 @@ AC_CONFIG_FILES([centos/6/run/Dockerfile])
 AC_SUBST_FILE([CENTOS_7_INC])
 CENTOS_7_INC=$srcdir/centos/7/centos7.inc
 
-AC_CONFIG_FILES([centos/7/build/cjose.spec centos/7/build/mod_auth_openidc.spec centos/7/build/Dockerfile])
+AC_CONFIG_FILES([centos/7/build/cjose.spec centos/7/build/mod_auth_openidc.spec centos/7/build/mod_token_binding.spec centos/7/build/Dockerfile])
 AC_CONFIG_FILES([centos/7/run/Dockerfile])
 
 #

@@ -1,0 +1,10 @@
+ENV MOD_TOKEN_BINDING_TGZ mod_token_binding-${MOD_TOKEN_BINDING_VERSION}.tar.gz
+
+# build mod_token_binding RPM
+RUN curl -o ${HOME}/rpm/SOURCES/${MOD_TOKEN_BINDING_TGZ} https://mod-auth-openidc.org/download/${MOD_TOKEN_BINDING_TGZ}
+ADD mod_token_binding.spec ${HOME}/rpm/SPECS/mod_token_binding.spec
+
+RUN git clone https://github.com/zmartzone/token_bind.git
+RUN cd token_bind && git checkout expose-negotiated-version
+
+RUN ${CMD_PREFIX} rpmbuild --define "release ${MOD_TOKEN_BINDING_VERSION}" -bb ${HOME}/rpm/SPECS/mod_token_binding.spec

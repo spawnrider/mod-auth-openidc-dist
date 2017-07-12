@@ -1,0 +1,2 @@
+RUN curl -s -L -o ~/${MOD_TOKEN_BINDING_PKG} https://mod-auth-openidc.org/download/${MOD_TOKEN_BINDING_PKG}
+RUN ${CMD_PREFIX} yum localinstall -y ~/${MOD_TOKEN_BINDING_PKG}

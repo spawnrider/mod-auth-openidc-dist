@@ -1,0 +1,10 @@
+@CENTOS_MOD_TOKEN_BINDING_SPEC_INC@
+%config(noreplace) %{_sysconfdir}/httpd/conf.modules.d/11-token_binding.conf
+
+%install
+mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
+make install
+
+install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d
+echo 'LoadModule token_binding_module modules/mod_token_binding.so' > \
+       $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.modules.d/11-token_binding.conf 

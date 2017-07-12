@@ -1,0 +1,5 @@
+@CENTOS_MOD_TOKEN_BINDING_SPEC_INC@
+
+%install
+mkdir -p $RPM_BUILD_ROOT%{_libdir}/httpd/modules/
+make install
