@@ -1,6 +1,6 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hans.zandbelt@zmartzone.eu])
 
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.2rc1])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.2])
 AC_SUBST([CJOSE_VERSION], [0.5.1])
 
 #
