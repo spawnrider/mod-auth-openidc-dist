@@ -1,7 +1,7 @@
-FROM ubuntu:zesty
+FROM ubuntu:artful
 MAINTAINER hans.zandbelt@zmartzone.eu
 
-# Ubuntu 17.04
+# Ubuntu 17.10
 
 RUN apt-get update && apt-get install -y apt-utils curl
 

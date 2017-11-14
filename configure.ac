@@ -1,6 +1,6 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hans.zandbelt@zmartzone.eu])
 
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.3rc2])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.3rc3])
 AC_SUBST([CJOSE_VERSION], [0.5.1])
 
 #
@@ -118,6 +118,14 @@ AC_CONFIG_FILES([ubuntu/xenial/run/Dockerfile])
 # Ubuntu Yakkety
 
 AC_CONFIG_FILES([ubuntu/yakkety/run/Dockerfile])
+
+# Ubuntu Zesty
+
+AC_CONFIG_FILES([ubuntu/zesty/run/Dockerfile])
+
+# Ubuntu Artful
+
+AC_CONFIG_FILES([ubuntu/artful/run/Dockerfile])
 
 #
 # the end
