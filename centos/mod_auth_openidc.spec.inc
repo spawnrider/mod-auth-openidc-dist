@@ -5,7 +5,7 @@ Summary:	Authentication/Authorization module for the Apache 2.x HTTP server that
 
 Group:		Networking/Daemons/HTTP
 License:	Apache License Version 2.0
-URL:		https://github.com/pingidentity/mod_auth_openidc
+URL:		https://github.com/zmartzone/mod_auth_openidc
 Source0:        mod_auth_openidc-%{version}.tar.gz
 
 Requires:       httpd, openssl, curl, jansson, hiredis, pcre, cjose

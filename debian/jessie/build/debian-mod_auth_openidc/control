@@ -4,7 +4,7 @@ Maintainer: Hans Zandbelt <hans.zandbelt@zmartzone.eu>
 Build-Depends: debhelper (>= 8.0.0), autotools-dev, apache2-dev, libssl1.0-dev | libssl-dev (<< 1.1), libcurl4-openssl-dev, libjansson-dev, libhiredis-dev, libpcre3-dev, libcjose-dev, pkg-config
 Standards-Version: 3.9.8
 Section: web
-Homepage: https://github.com/pingidentity/mod_auth_openidc
+Homepage: https://github.com/zmartzone/mod_auth_openidc
 
 Package: libapache2-mod-auth-openidc
 Architecture: any

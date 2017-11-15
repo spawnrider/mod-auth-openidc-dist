@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: mod-auth-openidc
 Upstream-Contact: Hans Zandbelt <hans.zandbelt@zmartzone.eu>
-Source: https://github.com/pingidentity/mod_auth_openidc
+Source: https://github.com/zmartzone/mod_auth_openidc
 
 Files: *
 Copyright: 2013-2015 Hans Zandbelt <hans.zandbelt@zmartzone.eu>
