@@ -1,6 +1,6 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hans.zandbelt@zmartzone.eu])
 
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.3rc3])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.3])
 AC_SUBST([CJOSE_VERSION], [0.5.1])
 
 #
@@ -103,16 +103,12 @@ UBUNTU_TRUSTY_INC=$srcdir/ubuntu/trusty/trusty.inc
 AC_CONFIG_FILES([ubuntu/trusty/build/debian-cjose/changelog ubuntu/trusty/build/debian-mod_auth_openidc/changelog ubuntu/trusty/build/Dockerfile])
 AC_CONFIG_FILES([ubuntu/trusty/run/Dockerfile])
 
-# Ubuntu Wily
-
-AC_SUBST_FILE([UBUNTU_WILY_INC])
-UBUNTU_WILY_INC=$srcdir/ubuntu/wily/wily.inc
-
-AC_CONFIG_FILES([ubuntu/wily/build/debian-cjose/changelog ubuntu/wily/build/debian-mod_auth_openidc/changelog ubuntu/wily/build/Dockerfile])
-AC_CONFIG_FILES([ubuntu/wily/run/Dockerfile])
-
 # Ubuntu Xenial
 
+AC_SUBST_FILE([UBUNTU_XENIAL_INC])
+UBUNTU_XENIAL_INC=$srcdir/ubuntu/xenial/xenial.inc
+
+AC_CONFIG_FILES([ubuntu/xenial/build/debian-cjose/changelog ubuntu/xenial/build/debian-mod_auth_openidc/changelog ubuntu/xenial/build/Dockerfile])
 AC_CONFIG_FILES([ubuntu/xenial/run/Dockerfile])
 
 # Ubuntu Yakkety
