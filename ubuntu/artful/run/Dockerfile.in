@@ -6,12 +6,12 @@ MAINTAINER hans.zandbelt@zmartzone.eu
 RUN apt-get update && apt-get install -y apt-utils curl
 
 ENV CJOSE_VERSION @CJOSE_VERSION@
-ENV CJOSE_PKG libcjose0_${CJOSE_VERSION}-1~wily+1_amd64.deb
+ENV CJOSE_PKG libcjose0_${CJOSE_VERSION}-1~xenial+1_amd64.deb
 @DEBIAN_INSTALL_CJOSE@
 
 RUN apt-get update && apt-get install -y libhiredis0.13 libcurl3
 ENV MOD_AUTH_OPENIDC_VERSION @MOD_AUTH_OPENIDC_VERSION@
-ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1~wily+1_amd64.deb
+ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1~xenial+1_amd64.deb
 @DEBIAN_INSTALL_MOD_AUTH_OPENIDC@
 
 ADD 000-default.conf /etc/apache2/sites-available/
