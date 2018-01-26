@@ -1,6 +1,6 @@
 AC_INIT([mod_auth_openidc-dist],[1.0],[hans.zandbelt@zmartzone.eu])
 
-AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.4rc1])
+AC_SUBST([MOD_AUTH_OPENIDC_VERSION], [2.3.4rc2])
 AC_SUBST([CJOSE_VERSION], [0.5.1])
 
 #
@@ -110,14 +110,6 @@ UBUNTU_XENIAL_INC=$srcdir/ubuntu/xenial/xenial.inc
 
 AC_CONFIG_FILES([ubuntu/xenial/build/debian-cjose/changelog ubuntu/xenial/build/debian-mod_auth_openidc/changelog ubuntu/xenial/build/Dockerfile])
 AC_CONFIG_FILES([ubuntu/xenial/run/Dockerfile])
-
-# Ubuntu Yakkety
-
-AC_CONFIG_FILES([ubuntu/yakkety/run/Dockerfile])
-
-# Ubuntu Zesty
-
-AC_CONFIG_FILES([ubuntu/zesty/run/Dockerfile])
 
 # Ubuntu Artful
 
